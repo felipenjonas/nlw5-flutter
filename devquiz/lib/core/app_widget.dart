@@ -10,7 +10,7 @@ class AppWidget extends StatelessWidget {
     return MaterialApp(
       title: "devquiz",
       // home: SplashPage(), Vai mostrar a splash pra poder ser configurada
-      home: ChallengePage(),
+      home: HomePage(),
     );
   }
 }
