@@ -1,6 +1,7 @@
 import 'package:devquiz/core/app_colors.dart';
 import 'package:devquiz/core/app_text_styles.dart';
 import 'package:devquiz/core/core.dart';
+import 'package:devquiz/shared/widgets/progress_indicator/progress_indicator_widget.dart';
 import 'package:flutter/material.dart';
 
 class QuizCardWidget extends StatelessWidget {
@@ -9,7 +10,7 @@ class QuizCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16),
+      padding: EdgeInsets.all(8),
       decoration: BoxDecoration(
         border: Border.fromBorderSide(BorderSide(color: AppColors.border)),
         color: AppColors.white,
@@ -38,12 +39,10 @@ class QuizCardWidget extends StatelessWidget {
                 child: Text("3 de 10", style: AppTextStyles.body11),
               ),
               Expanded(
-                flex: 4,
-                child: LinearProgressIndicator(
-                    value: 0.3,
-                    backgroundColor: AppColors.chartSecondary,
-                    valueColor:
-                        AlwaysStoppedAnimation<Color>(AppColors.chartPrimary)),
+                flex: 2,
+                child: ProgressIndicatorWidget(
+                  value: 0.3,
+                ),
               ),
             ],
           ),
