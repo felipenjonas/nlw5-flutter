@@ -17,7 +17,6 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBarWidget(),
       body: Padding(
-        //Padding para que tenha espaço entre a borda da tela
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
@@ -31,7 +30,27 @@ class _HomePageState extends State<HomePage> {
                 LevelButtonWidget(label: "Perito"),
               ],
             ),
-            QuizCardWidget()
+            SizedBox(height: 24),
+            Expanded(
+              child: GridView.count(
+                // Add Spacing entre colunas do grid
+                crossAxisSpacing: 16,
+                // Add spacing entre as linhas do grid
+                mainAxisSpacing: 16,
+                // crossaxiscount = Vai ocupar X colunas na nossa tela
+                crossAxisCount: 2,
+                children: [
+                  QuizCardWidget(),
+                  QuizCardWidget(),
+                  QuizCardWidget(),
+                  QuizCardWidget(),
+                  QuizCardWidget(),
+                  QuizCardWidget(),
+                  QuizCardWidget(),
+                  QuizCardWidget(),
+                ],
+              ),
+            )
           ],
         ),
       ),
