@@ -1,6 +1,9 @@
 <h1 style="color:purple" align="center"> DevQuiz</h1>
-<div align="start" widht="1000px" >
-<h3 style="color:grey">Telas do APP</h3>
+<p>Aplicativo realizado durante o evento Next level Week 5° Edição<br>Produzido pela Rocketseat de forma gratuita.<br>A Trilha escolhida foi Flutter.</p>
+
+<h3 style="color:grey">App:</h3>
+
+<div align="center">
     <img src="/images/splash.jpg" width="100px">
     <img src="/images/Home.jpg" width="100px">
     <img src="/images/Quiz.jpg" width="100px">
