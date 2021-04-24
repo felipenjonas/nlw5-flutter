@@ -22,6 +22,7 @@ class _HomePageState extends State<HomePage> {
   @override
   // Essa função iniState é chamada antes de qualquer coisa ser renderizada na tela. Só está disponível em classes Statful. Ele só é chamado 1 vez (precisa de hot reload) e o build é chamado sempre que se altera algo.
   void initState() {
+    // ignore: todo
     // TODO: implement initState
     super.initState();
 
@@ -68,10 +69,14 @@ class _HomePageState extends State<HomePage> {
                                 "${e.questionAnswered} de ${e.questions.length}",
                             onTap: () {
                               Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => ChallengePage(
-                                          questions: e.questions)));
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => ChallengePage(
+                                    questions: e.questions,
+                                    title: e.title,
+                                  ),
+                                ),
+                              );
                             },
                           ))
                       .toList(),
