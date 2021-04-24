@@ -1,5 +1,5 @@
 <h1 style="color:purple" align="center"> DevQuiz</h1>
-<p>Aplicativo realizado durante o evento Next level Week 5° Edição<br>Produzido pela Rocketseat de forma gratuita.<br>A Trilha escolhida foi Flutter.</p>
+<p>Aplicativo realizado durante o evento Next level Week 5° Edição.<br> O Evento é produzido pela Rocketseat de forma gratuita, e a Trilha que eu escolhi foi Flutter.</p>
 
 <h3 style="color:grey">App:</h3>
 
