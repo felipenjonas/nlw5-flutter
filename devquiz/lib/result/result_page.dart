@@ -21,7 +21,7 @@ class ResultPage extends StatelessWidget {
     double myUtilizationPercent = utilization * 100;
     String utilizationConverted = myUtilizationPercent.toStringAsFixed(0);
     Share.share(
-        "Next Level Week - 5ª Edição\n Trilha de Flutter \n Eu obtive $utilizationConverted % de aproveitamento! ");
+        "QuizDev-\nEu obtive $utilizationConverted % de aproveitamento no Quiz $title!");
   }
 
   @override
