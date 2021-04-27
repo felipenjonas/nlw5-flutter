@@ -2,8 +2,10 @@ import 'package:devquiz/challenge/challenge_controller.dart';
 import 'package:devquiz/challenge/widgets/next_button/next_button_widget.dart';
 import 'package:devquiz/challenge/widgets/question_indicator/question_indicator_widget.dart';
 import 'package:devquiz/challenge/widgets/quiz/quiz_widget.dart';
+import 'package:devquiz/home/home_page.dart';
 import 'package:devquiz/models/question_model.dart';
-import 'package:devquiz/result/result_page.dart';
+import 'package:devquiz/result/result_page_right_0.dart';
+import 'package:devquiz/result/result_page_right_100.dart';
 import 'package:flutter/material.dart';
 
 class ChallengePage extends StatefulWidget {
@@ -106,16 +108,24 @@ class _ChallengePageState extends State<ChallengePage> {
                       child: NextButtonWidget.green(
                         label: "Confirmar",
                         onTap: () {
-                          Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => ResultPage(
-                                result: controller.qtdAnswerRight,
-                                title: widget.title,
-                                length: widget.questions.length,
+                          if (controller.qtdAnswerRight >= 1)
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ResultPage(
+                                  result: controller.qtdAnswerRight,
+                                  title: widget.title,
+                                  length: widget.questions.length,
+                                ),
                               ),
-                            ),
-                          );
+                            );
+                          else
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => BadResultPage(),
+                              ),
+                            );
                         },
                       ),
                     ),

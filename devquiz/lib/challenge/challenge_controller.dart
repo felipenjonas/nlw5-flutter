@@ -1,6 +1,7 @@
 //Current Page
 
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 
 class ChallengeController {
   final currentPageNotifier = ValueNotifier<int>(1);
